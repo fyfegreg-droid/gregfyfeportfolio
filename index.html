@@ -82,6 +82,22 @@ nav ul a:hover{color:var(--hero-ink)}
 .track p{font-size:.92rem;color:var(--muted)}
 .track ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
 .track li{font-family:var(--mono);font-size:.72rem;padding:4px 9px;border-radius:999px;background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--ink)}
+.track .more{margin-top:auto;align-self:flex-start;font-family:var(--mono);font-size:.76rem;font-weight:500;border:1.5px solid var(--c);color:var(--ink);background:color-mix(in srgb,var(--c) 10%,transparent);padding:8px 14px;border-radius:999px;cursor:pointer;transition:background .15s,color .15s}
+.track .more:hover{background:var(--c);color:#fff}
+.track ul{margin-bottom:6px}
+dialog.tdlg{border:0;padding:0;border-radius:20px;max-width:620px;width:calc(100% - 32px);background:var(--surface);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);border-top:6px solid var(--c)}
+dialog.tdlg::backdrop{background:rgba(14,27,44,.6)}
+.tdlg .in{padding:28px 30px 30px;display:flex;flex-direction:column;gap:14px}
+.tdlg .top{display:flex;justify-content:space-between;align-items:start;gap:16px}
+.tdlg .num{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c);font-weight:500}
+.tdlg h3{font-size:1.6rem;font-weight:800;font-stretch:118%;margin-top:6px}
+.tdlg .x{border:1px solid var(--line);background:transparent;color:var(--ink);width:36px;height:36px;border-radius:50%;font-size:1.2rem;cursor:pointer;flex:none}
+.tdlg p{color:var(--muted)}
+.tdlg ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.tdlg .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.tdlg .btn{color:var(--ink)}
+.tdlg .btn.primary{background:var(--c);border-color:var(--c);color:#fff}
+.tdlg .btn.ghost:hover{background:var(--ink);color:var(--surface)}
 .t-comm{--c:var(--t-comm)} .t-mkt{--c:var(--t-mkt)} .t-hr{--c:var(--t-hr)} .t-field{--c:var(--t-field)}
 
 /* sections */
@@ -244,7 +260,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
       <p class="lede">I'm Greg Fyfe. I started in public relations, pitching national food, beverage and hospitality brands. Today I run job sites as an on-site supervisor for a mechanical contractor. Either way, my job is the same: clear communication, organized follow-through, and deadlines that hold.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch →</a>
-        <a class="btn ghost" href="https://34bc7efa-d6b5-45b9-9bf9-ddf2d6caf1b0.usrfiles.com/ugd/76e0a8_c68ea583aa3248fc91301efee07eacb9.pdf" target="_blank" rel="noopener">Resume ↗</a>
+        <a class="btn ghost" href="docs/Greg_Fyfe_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/gregory-fyfe" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
@@ -262,24 +278,28 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
       <h3>Media outreach &amp; client service</h3>
       <p>Pitching, tracking coverage and keeping clients informed.</p>
       <ul><li>Pitch writing</li><li>Media tracking</li><li>Muck Rack</li><li>Coverage reports</li><li>Agendas &amp; recaps</li></ul>
+      <button class="more" type="button" data-track="pr" aria-haspopup="dialog">View résumé &amp; cover letter <span aria-hidden="true">→</span></button>
     </div>
     <div class="track t-mkt">
       <span class="num">02 · Marketing</span>
       <h3>Campaigns, content &amp; brand</h3>
       <p>Social content, campaign strategy and brand visibility.</p>
       <ul><li>Social media</li><li>Content creation</li><li>Email outreach</li><li>Campaign strategy</li><li>LinkedIn Marketing certified</li></ul>
+      <button class="more" type="button" data-track="marketing" aria-haspopup="dialog">View résumé &amp; cover letter <span aria-hidden="true">→</span></button>
     </div>
     <div class="track t-hr">
       <span class="num">03 · Recruiting &amp; HR</span>
       <h3>People, outreach &amp; coordination</h3>
       <p>Building relationships and keeping people organized and informed.</p>
       <ul><li>Relationship building</li><li>Outreach &amp; follow-up</li><li>Scheduling</li><li>Team coordination</li><li>Documentation</li></ul>
+      <button class="more" type="button" data-track="hr" aria-haspopup="dialog">View résumé &amp; cover letter <span aria-hidden="true">→</span></button>
     </div>
     <div class="track t-field">
       <span class="num">04 · Field operations</span>
       <h3>Projects, vendors &amp; crews</h3>
       <p>Running job sites from proposal to closeout.</p>
       <ul><li>Proposals &amp; bids</li><li>Change orders</li><li>Submittals</li><li>Vendor sourcing</li><li>HVAC-R trained</li></ul>
+      <button class="more" type="button" data-track="field" aria-haspopup="dialog">View résumé &amp; cover letter <span aria-hidden="true">→</span></button>
     </div>
   </div>
 
@@ -475,6 +495,33 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
   </div>
 
   <footer><span>© 2026 Gregory Fyfe</span><span>Communications · Marketing · Recruiting · Operations</span></footer>
+  <dialog class="tdlg" id="track-dlg" aria-labelledby="td-title">
+    <div class="in">
+      <div class="top"><div><span class="num" id="td-num"></span><h3 id="td-title"></h3></div><button class="x" type="button" id="td-close" aria-label="Close">×</button></div>
+      <p id="td-pitch"></p>
+      <ul id="td-list"></ul>
+      <div class="acts"><a class="btn primary" id="td-res" target="_blank" rel="noopener">Tailored résumé ↗</a><a class="btn ghost" id="td-cl" target="_blank" rel="noopener">Cover letter ↗</a></div>
+    </div>
+  </dialog>
+  <script>
+  (function(){
+    var T={
+      pr:{c:'t-comm',n:'01 · Communications & PR',t:'Media outreach & client service',p:'Agency-trained in pitching, coverage tracking and client reporting for national food, beverage, hospitality and lifestyle brands.',l:['Account Coordinator at Berk Communications, New York (2024–2025)','Clients included The Cheesecake Factory, Caesars Entertainment and Gran Coramino Tequila','Pitches that earned digital and print placements; coverage tracked in Muck Rack','Agendas, call recaps, briefing documents and monthly coverage reports'],r:'PR'},
+      marketing:{c:'t-mkt',n:'02 · Marketing',t:'Campaigns, content & brand',p:'Marketing degree plus hands-on social content, email outreach and campaign support for real brands.',l:['Led social content, email outreach and website updates for The Growing Artist','Supported campaigns for national consumer brands at Berk Communications','B.S. Business Administration, Marketing, UNC Charlotte (3.85 GPA)','LinkedIn Marketing Strategy Certification'],r:'Marketing'},
+      hr:{c:'t-hr',n:'03 · Recruiting & HR',t:'People, outreach & coordination',p:'Experience finding the right people, building relationships and keeping teams organized and informed.',l:['Supervise field staff and coordinate crew schedules across job sites','Personalized outreach to potential clients and collaborators','Built and maintained media relationships and contact lists','President, Hispanic College Awareness Program, UNC Charlotte'],r:'HR'},
+      field:{c:'t-field',n:'04 · Field operations',t:'Projects, vendors & crews',p:'Hands-on HVAC-R background and current on-site supervision for a commercial mechanical contractor.',l:['Main point of contact with general contractors; proposals, bids and material lists','Vendor sourcing, pricing and delivery coordination; field staff supervision','HVAC-R degree; field experience with Johnson Controls and Edison Heating & Cooling','OSHA 30, EPA Universal, Confined Space and Aerial Lift certified'],r:'Field'}
+    };
+    var d=document.getElementById('track-dlg');
+    function open(k){var o=T[k];d.className='tdlg '+o.c;
+      document.getElementById('td-num').textContent=o.n;document.getElementById('td-title').textContent=o.t;document.getElementById('td-pitch').textContent=o.p;
+      var ul=document.getElementById('td-list');ul.innerHTML='';o.l.forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});
+      document.getElementById('td-res').href='docs/Greg_Fyfe_Resume_'+o.r+'.pdf';document.getElementById('td-cl').href='docs/Greg_Fyfe_Cover_Letter_'+o.r+'.pdf';
+      if(d.showModal){d.showModal()}else{d.setAttribute('open','')}}
+    document.querySelectorAll('.track .more').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.track)})});
+    document.getElementById('td-close').addEventListener('click',function(){d.close?d.close():d.removeAttribute('open')});
+    d.addEventListener('click',function(e){if(e.target===d){d.close()}});
+  })();
+  </script>
 </main>
 
 <script>
