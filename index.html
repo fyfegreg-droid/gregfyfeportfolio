@@ -215,6 +215,44 @@ section{padding-top:80px}
 .line a:hover,.line button:hover{background:var(--accent);border-color:var(--accent)}
 footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
+.press{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.pstage{background:var(--hero);padding:28px;display:flex;flex-direction:column;gap:16px;justify-content:center;min-width:0;color:var(--hero-ink)}
+.pcard{display:block;border-radius:10px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.4);aspect-ratio:16/9;background:#1a2638;position:relative;text-decoration:none;color:inherit}
+.pcard img{width:100%;height:100%;object-fit:cover;transition:opacity .25s;display:block}
+.pfb{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:28px;background:linear-gradient(140deg,color-mix(in srgb,var(--pc) 85%,#000) 0%,color-mix(in srgb,var(--pc) 40%,#0E1B2C) 100%);color:#fff}
+.pfb::before{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;border:2px solid rgba(255,255,255,.18)}
+.pfb b{font-family:var(--display);font-weight:800;font-stretch:118%;font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.05;letter-spacing:-.01em}
+.pfb span{font-family:var(--body);font-size:clamp(.95rem,1.8vw,1.15rem);line-height:1.35;max-width:34ch;opacity:.92}
+.pcard .tv{position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.6);color:#fff;padding:3px 9px;border-radius:999px}
+.pmeta{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.pmeta .pout{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-muted)}
+.pmeta h3{font-size:1.2rem;font-weight:700;font-stretch:112%;line-height:1.25;margin-top:4px;max-width:46ch}
+.pmeta p{font-size:.88rem;color:var(--hero-muted);margin-top:4px}
+.pact{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pnav{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.78rem;color:var(--hero-muted)}
+.pnav button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--hero-line);background:transparent;color:var(--hero-ink);cursor:pointer;font-size:1rem;display:grid;place-items:center}
+.pnav button:hover{border-color:var(--hero-ink)}
+.pside{padding:16px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pchips{display:flex;flex-wrap:wrap;gap:6px}
+.pchip{font-family:var(--mono);font-size:.74rem;border:1px solid var(--line);background:transparent;color:var(--ink);padding:6px 11px;border-radius:999px;cursor:pointer}
+.pchip:hover{border-color:var(--ink)}
+.pchip[aria-pressed="true"]{background:var(--pc);border-color:var(--pc);color:#fff}
+.pabout{display:flex;flex-direction:column;gap:6px;padding:2px 4px 12px;border-bottom:1px solid var(--line)}
+.pabout .label{color:var(--pc)}
+.pabout p{font-size:.95rem;line-height:1.5}
+.plist{list-style:none;margin:0;padding:0 4px 0 0;display:flex;flex-direction:column;gap:2px;max-height:380px;overflow-y:auto}
+.pitem{width:100%;text-align:left;background:transparent;border:0;border-radius:12px;padding:10px 12px;cursor:pointer;display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:center;color:var(--ink);font:inherit}
+.pitem:hover{background:var(--paper)}
+.pitem[aria-current="true"]{background:color-mix(in srgb,var(--pc) 12%,transparent)}
+.pitem .th{width:56px;height:42px;border-radius:7px;overflow:hidden;background:color-mix(in srgb,var(--pc) 70%,#0E1B2C);display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:.8rem;letter-spacing:.02em}
+.pitem .th img{width:100%;height:100%;object-fit:cover;display:block}
+.pitem b{display:block;font-family:var(--display);font-weight:700;font-stretch:112%;font-size:.98rem;line-height:1.2}
+.pitem span.h{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.84rem;line-height:1.35;color:var(--ink);margin-top:2px}
+.pitem span.d{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:3px}
+.outlets{margin-top:22px;font-family:var(--mono);font-size:.76rem;line-height:1.7;color:var(--hero-muted);max-width:60ch}
+.outlets b{color:var(--hero-ink);font-weight:500}
+@media (max-width:820px){ .press{grid-template-columns:1fr} .pstage{padding:18px} .pfb{padding:18px} .plist{max-height:none} }
+.exp-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.8rem;color:var(--c);text-decoration:none;border-bottom:1px solid currentColor}
 @media (max-width:980px){ .tracks{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:820px){
   .hero{grid-template-columns:1fr;gap:32px;padding-block:44px 72px}
@@ -263,6 +301,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
         <a class="btn ghost" href="docs/Greg_Fyfe_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/gregory-fyfe" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
+      <p class="outlets">Coverage I've supported: <b>People</b> · <b>Forbes</b> · <b>Parade</b> · <b>Condé Nast Traveler</b> · <b>The Hollywood Reporter</b> · <b>TODAY</b> · <b>Tasting Table</b> · <b>Travel Weekly</b></p>
     </div>
     <figure class="portrait">
       <div class="frame"><img src="https://static.wixstatic.com/media/76e0a8_9a181fab8d974f51a96375a2de58726a~mv2.jpg" alt="Headshot of Gregory Fyfe" width="400" height="400"></div>
@@ -328,6 +367,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
             <li>Helped develop pitches that earned digital and print placements, and kept media contact lists current.</li>
             <li>Wrote agendas, call recaps, briefing documents and monthly coverage reports, and compiled performance metrics on media trends.</li>
           </ul>
+          <a class="exp-link" href="#work" data-open="tab-press">See press coverage →</a>
         </div>
       </div>
       <div class="row" style="--c:var(--t-mkt)">
@@ -350,6 +390,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
       <div class="tabs" role="tablist" aria-label="Work type">
         <button class="tab" role="tab" id="tab-decks" aria-selected="true" aria-controls="panel-decks">Presentations</button>
         <button class="tab" role="tab" id="tab-social" aria-selected="false" aria-controls="panel-social">Social media</button>
+        <button class="tab" role="tab" id="tab-press" aria-selected="false" aria-controls="panel-press">Press coverage</button>
       </div>
     </div>
 
@@ -435,6 +476,63 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
             gd.textContent=b.dataset.date;gd.setAttribute('datetime',b.dataset.dt);gt.textContent=short;gy.textContent=b.dataset.type;
           });
         });
+      })();
+      </script>
+    </div>
+    <div class="panel" id="panel-press" role="tabpanel" aria-labelledby="tab-press" hidden>
+      <div class="press" id="press" style="--pc:var(--t-mkt)">
+        <div class="pstage">
+          <a class="pcard" id="p-card" href="#" target="_blank" rel="noopener">
+            <img id="p-img" alt="" referrerpolicy="no-referrer" loading="lazy">
+            <div class="pfb" id="p-fb" hidden><b id="p-fbo"></b><span id="p-fbh"></span></div>
+            <span class="tv" id="p-tv" hidden>TV segment</span>
+          </a>
+          <div class="pmeta">
+            <div><span class="pout" id="p-out"></span><h3 id="p-hl"></h3><p id="p-date"></p></div>
+          </div>
+          <div class="pact">
+            <a class="btn primary" id="p-link" href="#" target="_blank" rel="noopener">Read article ↗</a>
+            <div class="pnav"><button type="button" id="p-prev" aria-label="Previous article">←</button><span id="p-count"></span><button type="button" id="p-next" aria-label="Next article">→</button></div>
+          </div>
+        </div>
+        <div class="pside">
+          <div class="pchips" role="group" aria-label="Client"><button class="pchip" type="button" aria-pressed="true" data-g="0" style="--pc:var(--t-mkt)">Caesars Las Vegas <span aria-hidden="true">· 10</span></button><button class="pchip" type="button" aria-pressed="false" data-g="1" style="--pc:var(--t-hr)">Caesars New Orleans <span aria-hidden="true">· 9</span></button><button class="pchip" type="button" aria-pressed="false" data-g="2" style="--pc:var(--t-field)">The Cheesecake Factory <span aria-hidden="true">· 17</span></button><button class="pchip" type="button" aria-pressed="false" data-g="3" style="--pc:var(--t-comm)">VAI Resort <span aria-hidden="true">· 7</span></button><button class="pchip" type="button" aria-pressed="false" data-g="4" style="--pc:var(--t-mkt)">Spirits <span aria-hidden="true">· 3</span></button><button class="pchip" type="button" aria-pressed="false" data-g="5" style="--pc:var(--t-hr)">Embassy Suites Aruba <span aria-hidden="true">· 1</span></button></div>
+          <div class="pabout"><span class="label" id="p-label"></span><p id="p-blurb"></p></div>
+          <ul class="plist" id="p-list"></ul>
+        </div>
+      </div>
+      <script>
+      (function(){
+        var G=[{"id": "lv", "name": "Caesars Las Vegas", "c": "var(--t-mkt)", "label": "Caesars Entertainment · Las Vegas", "blurb": "Supported media relations for Caesars Palace, Paris Las Vegas and Flamingo: hosted press trips, the late-2024 openings of Pinky’s by Vanderpump, Gordon Ramsay Burger and Dominique Ansel Marché, and the March 2025 Vanderpump Hotel announcement.", "items": [{"o": "Parade", "h": "Caesars Palace in Las Vegas Is Iconic for a Reason—Here's What Blew Me Away the Most", "d": "Mar 30, 2025", "u": "https://parade.com/travel/caesars-palace-las-vegas-review", "i": "https://parade.com/.image/MjEzNjk1MjkzMzExNDI4MDQ3/vegas.png?profile=share16-9", "tv": false}, {"o": "Haute Living", "h": "What to Do in Las Vegas for July 4: Fireworks, Pool Parties & Big-Name Shows", "d": "Jun 17, 2025", "u": "https://hauteliving.com/2025/06/july-4-las-vegas-2025/772584/", "i": "", "tv": false}, {"o": "The Infatuation", "h": "Dominique Ansel Marché (review)", "d": "May 16, 2025", "u": "https://www.theinfatuation.com/las-vegas/reviews/dominique-ansel-march", "i": "", "tv": false}, {"o": "The Knockturnal", "h": "Gordon Ramsay Burger at Flamingo Las Vegas is Redefining the Burger Experience with All-Day Brunch", "d": "Apr 10, 2025", "u": "https://theknockturnal.com/gordon-ramsay-burger-at-flamingo-las-vegas-serves-the-best-burgers-and-a-daily-all-day-brunch", "i": "", "tv": false}, {"o": "Modern Luxury", "h": "Lisa Vanderpump and Caesars Entertainment plan a Las Vegas hotel", "d": "Mar 2025", "u": "https://www.modernluxury.com/lisa-vanderpump-las-vegas-hotel-caesars-entertainment/", "i": "", "tv": false}, {"o": "TravelPulse", "h": "Caesars to Open New Vanderpump Hotel on Las Vegas Strip", "d": "Mar 13, 2025", "u": "https://www.travelpulse.com/news/hotels-and-resorts/caesars-to-open-new-vanderpump-hotel-on-las-vegas-strip", "i": "", "tv": false}, {"o": "People", "h": "Lisa Vanderpump and Caesars Entertainment to Open The Vanderpump Hotel on Las Vegas Strip in 2026 (Exclusive)", "d": "Mar 11, 2025", "u": "https://people.com/lisa-vanderpump-caesars-entertainment-to-open-the-vanderpump-hotel-on-las-vegas-strip-in-2026-exclusive-11695217", "i": "", "tv": false}, {"o": "Travel Weekly", "h": "Las Vegas Strip gets a second Gordon Ramsay Burger", "d": "Jan 2025", "u": "https://www.travelweekly.com/North-America-Travel/Gordon-Ramsay-burger-restaurant-Las-Vegas-Strip-Flamingo", "i": "", "tv": false}, {"o": "People", "h": "Lisa Vanderpump Says 'Everything's Couture' at Brand New Pinky's Las Vegas Restaurant (Exclusive)", "d": "Dec 2024", "u": "https://www.aol.com/lifestyle/lisa-vanderpump-says-everythings-couture-230259513.html", "i": "", "tv": false}, {"o": "Parade", "h": "I Tried Lisa Vanderpump's Newest Las Vegas Restaurant—Here's My Honest Review", "d": "Dec 13, 2024", "u": "https://parade.com/food/pinkys-by-vanderpump-las-vegas-restaurant", "i": "", "tv": false}]}, {"id": "nola", "name": "Caesars New Orleans", "c": "var(--t-hr)", "label": "Caesars Entertainment · New Orleans", "blurb": "Helped build the pitch calendar and coverage tracker for the $435M Caesars New Orleans transformation and the Nobu Hotel opening, including the Super Bowl LIX stay angle.", "items": [{"o": "Forbes", "h": "3 Reasons To Book A Stay At The New Caesars New Orleans (During Super Bowl LIX)", "d": "Jan 14, 2025", "u": "https://www.forbes.com/sites/katiechang/2025/01/14/3-reasons-to-stay-at-the-new-caesars-new-orleans-during-super-bowl-lix/", "i": "https://imageio.forbes.com/specials-images/imageserve/67851be4715e56ba378e5737/0x0.jpg?format=jpg&crop=2500,1408,x0,y122,safe&height=900&width=1600&fit=bounds", "tv": false}, {"o": "The Manual", "h": "Nobu Hotel opens stunning new location at Caesars New Orleans", "d": "Jan 7, 2025", "u": "https://www.themanual.com/travel/nobu-hotel-caesars-new-orleans", "i": "https://i0.wp.com/cdn.dtmg.xyz/uploads/sites/9/2025/01/xxl_153177566.jpg?resize=1200%2C630&ssl=1", "tv": false}, {"o": "Boutique Hotelier USA", "h": "Nobu hotel opens within Caesars New Orleans", "d": "Jan 6, 2025", "u": "https://usa.boutiquehotelier.com/caesars-new-orleans-renovation-project/", "i": "https://usa.boutiquehotelier.com/cloud/2025/01/06/caesars-new-orleans.jpg", "tv": false}, {"o": "The Hollywood Reporter", "h": "Where to Stay in New Orleans: Caesars New Orleans", "d": "2025", "u": "https://www.hollywoodreporter.com/lifestyle/shopping/where-to-stay-in-new-orleans-caesars-new-orleans-hotel-review-1236189920/", "i": "", "tv": false}, {"o": "TravelAge West", "h": "Caesars New Orleans and Nobu Hotel New Orleans", "d": "2025", "u": "https://www.travelagewest.com/Travel/Hotels/caesars-new-orleans-nobu-new-orleans", "i": "", "tv": false}, {"o": "Condé Nast Traveler", "h": "Nobu Hotel Caesars New Orleans", "d": "2025", "u": "https://www.cntraveler.com/hotels/new-orleans/nobu-hotel-caesars-new-orleans", "i": "", "tv": false}, {"o": "Parade", "h": "I Just Visited Caesars Palace in New Orleans After Its $435 Million Transformation—and It's a 'Perfect Oasis'", "d": "Sep 6, 2025", "u": "https://www.aol.com/lifestyle/just-visited-caesars-palace-orleans-111000099.html", "i": "", "tv": false}, {"o": "Maxim", "h": "Inside French Quarter Fest & The $435 Million Revamp Of Caesars New Orleans", "d": "Apr 28, 2025", "u": "https://maxim.com/travel/inside-french-quarter-fest-the-435-million-revamp-of-caesars-new-orleans", "i": "", "tv": false}, {"o": "Travel Weekly", "h": "Nobu hotel opens within the Caesars New Orleans", "d": "Jan 2025", "u": "https://www.travelweekly.com/Travel-News/Hotel-News/Nobu-hotel-opens-within-Caesars-New-Orleans", "i": "", "tv": false}]}, {"id": "ccf", "name": "The Cheesecake Factory", "c": "var(--t-field)", "label": "The Cheesecake Factory", "blurb": "Coordinated National Cheesecake Day TV segments across several markets, supported media tastings for new cheesecake flavors and the 2025 menu, and wrote the weekly PR recaps.", "items": [{"o": "PureWow", "h": "The Cheesecake Factory Has a New Cheesecake That Tastes Like Summer Sunshine (Trust Me, I Tried It)", "d": "Jul 30, 2025", "u": "https://www.purewow.com/food/cheesecake-factory-peach-perfect-cheesecake-review", "i": "https://assets.purewow.com/wp-content/uploads/2025/07/the-cheesecake-factory-peach-perfect-cheesecake-review_uni.jpg", "tv": false}, {"o": "Tasting Table", "h": "We Tried The Cheesecake Factory's New Peach Perfect With Raspberry Drizzle Cheesecake And It's A Summer Must-Try", "d": "Jul 29, 2025", "u": "https://www.tastingtable.com/1925255/new-cheesecake-factory-flavor-peach-perfect-rapsberry-drizzle-review/", "i": "https://www.tastingtable.com/img/gallery/we-tried-the-cheesecake-factorys-new-peach-perfect-with-raspberry-drizzle-cheesecake-and-its-a-summer-must-try/l-intro-1753805112.jpg", "tv": false}, {"o": "PureWow", "h": "FYI, The Cheesecake Factory Does Brunch—and I Tasted & Ranked the Entire Menu", "d": "Jun 17, 2025", "u": "https://www.purewow.com/food/cheesecake-factory-brunch-menu-review", "i": "https://assets.purewow.com/wp-content/uploads/2025/06/cheesecake-factory-brunch-menu-review_fb.jpg", "tv": false}, {"o": "TODAY", "h": "The Cheesecake Factory’s new menu items for 2025", "d": "Mar 2025", "u": "https://www.today.com/food/restaurants/cheesecake-factory-new-menu-items-2025-rcna197973", "i": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2025-03/the-cheesecake-factory-Charred-Sugar-Snap-Peas-mc-250325-1ee26a.jpg", "tv": false}, {"o": "PureWow", "h": "I Tasted Every Appetizer on Cheesecake Factory's Happy Hour Menu—Here's How They Rank", "d": "Mar 24, 2025", "u": "https://www.purewow.com/food/cheesecake-factory-happy-hour-apps-ranked", "i": "https://assets.purewow.com/wp-content/uploads/2025/03/cheesecake-factory-happy-hour-appetizers_uni.jpg", "tv": false}, {"o": "Tasting Table", "h": "We Tried Cheesecake Factory's 2025 Menu Update And We Have Some Thoughts", "d": "Mar 18, 2025", "u": "https://www.tastingtable.com/1813892/cheesecake-factory-new-menu-reboot-review/", "i": "https://www.tastingtable.com/img/gallery/we-tried-cheesecake-factorys-2025-menu-update-and-we-have-some-thoughts/l-intro-1742309966.jpg", "tv": false}, {"o": "Tasting Table", "h": "Review: The Cheesecake Factory's New Triple Berry Bliss Will Wake Up Your Sweet Tooth", "d": "Jul 26, 2024", "u": "https://www.tastingtable.com/1630887/cheesecake-factory-triple-berry-bliss-review", "i": "https://www.tastingtable.com/img/gallery/review-the-cheesecake-factorys-new-triple-berry-bliss-will-wake-up-your-sweet-tooth/l-intro-1722015794.jpg", "tv": false}, {"o": "PureWow", "h": "The Cheesecake Factory Is Debuting a New Flavor—And It's So Perfect for Summer", "d": "Jul 19, 2024", "u": "https://www.purewow.com/food/cheesecake-factory-triple-berry-bliss-cheesecake", "i": "https://assets.purewow.com/wp-content/uploads/2024/07/cheesecake-factory-new-flavor-triple-berry-cheesecake_uni.jpg", "tv": false}, {"o": "Parade", "h": "The Cheesecake Factory Is Getting Behind This Major Trend", "d": "Jul 30, 2025", "u": "https://www.aol.com/cheesecake-factory-getting-behind-major-230514107.html", "i": "", "tv": false}, {"o": "Allrecipes", "h": "The Cheesecake Factory Just Released 20+ New Menu Items—and We Tried Every Single One", "d": "Mar 2025", "u": "https://www.aol.com/cheesecake-factory-just-released-20-190000671.html", "i": "", "tv": false}, {"o": "PureWow", "h": "The Cheesecake Factory Just Added 22 New Items to Its Menu (and I Ranked Them, for Science)", "d": "Mar 2025", "u": "https://www.aol.com/lifestyle/tasted-cheesecake-factory-menu-hands-170000234.html", "i": "", "tv": false}, {"o": "Bake Magazine", "h": "The Cheesecake Factory introduces Triple Berry Bliss for National Cheesecake Day", "d": "Jul 2024", "u": "https://bakemag.com/articles/19131-the-cheesecake-factory-introduces-triple-berry-bliss-for-national-cheesecake-day", "i": "", "tv": false}, {"o": "Snack & Bakery", "h": "The Cheesecake Factory debuts Triple Berry Bliss Cheesecake", "d": "Jul 30, 2024", "u": "https://www.snackandbakery.com/articles/111772-the-cheesecake-factory-debuts-triple-berry-bliss-cheesecake", "i": "", "tv": false}, {"o": "FOX 4 Dallas", "h": "Celebrate National Cheesecake Day with this Cheesecake Factory recipe", "d": "Jul 30, 2024", "u": "https://www.fox4news.com/news/celebrate-national-cheesecake-day-cheesecake-factory-recipe", "i": "", "tv": true}, {"o": "FOX19 Cincinnati", "h": "Cheesecake Factory introduces Triple Berry Bliss for National Cheesecake Day 2024", "d": "Jul 30, 2024", "u": "https://www.fox19.com/video/2024/07/30/cheesecake-factory-introduces-triple-berry-bliss-national-cheesecake-day-2024", "i": "", "tv": true}, {"o": "The Daily Meal", "h": "Review: Cheesecake Factory's Triple Berry Bliss Cheesecake Left Us Berry Pleased", "d": "Jul 26, 2024", "u": "https://www.thedailymeal.com/1630945/review-the-cheesecake-factory-triple-berry-bliss-cheesecake-left-us-berry-pleased", "i": "", "tv": false}, {"o": "Allrecipes", "h": "The Cheesecake Factory Just Added a Brand-New Cheesecake to Its Menu", "d": "Jul 17, 2024", "u": "https://ca.style.yahoo.com/cheesecake-factory-just-added-brand-210000130.html", "i": "", "tv": false}]}, {"id": "vai", "name": "VAI Resort", "c": "var(--t-comm)", "label": "VAI Resort · Glendale, AZ", "blurb": "Supported pre-opening media for Arizona’s largest resort, including the José Andrés Bar Mar announcement.", "items": [{"o": "Islands", "h": "Arizona's Upcoming Billion-Dollar Resort Will Boast Awe-Inspiring Amenities For A Wildly Luxurious Getaway", "d": "Apr 10, 2025", "u": "https://www.islands.com/1826260/arizona-upcoming-billion-dollar-resort-will-boast-awe-inspiring-amenities-luxurious-getaway-vai", "i": "https://www.islands.com/img/gallery/arizonas-upcoming-billion-dollar-resort-will-boast-awe-inspiring-amenities-for-a-wildly-luxurious-getaway/l-intro-1743590310.jpg", "tv": false}, {"o": "ABC15 Phoenix", "h": "Michelin-starred chef, José Andrés, to open 'Bar Mar' restaurant at VAI Resort in Glendale", "d": "Oct 22, 2024", "u": "https://www.abc15.com/entertainment/events/michelin-starred-chef-jose-andres-to-open-bar-mar-restaurant-at-vai-resort-in-glendale", "i": "https://ewscripps.brightspotcdn.com/dims4/default/781d51c/2147483647/strip/true/crop/1280x672+0+24/resize/1200x630!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F34%2F34%2F32491f214038beb491136f87300d%2Fgeneric-4.jpg", "tv": false}, {"o": "The Arizona Republic", "h": "VAI Resort reveal: See the music-themed guest rooms with concert views", "d": "Mar 15, 2025", "u": "https://www.yahoo.com/news/vai-resort-reveal-see-music-120223248.html", "i": "", "tv": false}, {"o": "Hospitality Design", "h": "The 76 Most-Anticipated Hotel Openings of 2025", "d": "Feb 5, 2025", "u": "https://hospitalitydesign.com/projects/hotels-resorts/2025-hotel-openings", "i": "", "tv": false}, {"o": "The Manual", "h": "Arizona's largest resort, VAI, to open in Glendale this year – see what's inside", "d": "Jan 28, 2025", "u": "https://themanual.com/travel/vai-resort-glendale", "i": "", "tv": false}, {"o": "ABC15 Phoenix", "h": "José Andrés Group partners with Glendale's VAI Resort", "d": "Oct 2024", "u": "https://www.abc15.com/news/business/jose-andres-group-partners-with-glendales-vai-resort", "i": "", "tv": false}, {"o": "Phoenix New Times", "h": "Chef José Andrés to open restaurant at VAI Resort Glendale", "d": "Oct 2024", "u": "https://www.phoenixnewtimes.com/food-drink/chef-jose-andres-to-open-restaurant-at-vai-resort-glendale-20407291/", "i": "", "tv": false}]}, {"id": "spirits", "name": "Spirits", "c": "var(--t-mkt)", "label": "Gran Coramino & Darco Spirits", "blurb": "Pitched cocktail recipes, seasonal angles and holiday gift guides for Gran Coramino, Kevin Hart’s tequila, and Darco Spirits’ American Harvest Vodka.", "items": [{"o": "Stupid Dope", "h": "Kevin Hart's Gran Coramino Tequila: The Perfect Holiday Gift with Celebrity Style", "d": "Dec 9, 2024", "u": "https://stupiddope.com/2024/12/kevin-harts-gran-coramino-tequila-the-perfect-holiday-gift-with-celebrity-style/", "i": "https://stupiddope.com/wp-content/uploads/2024/12/2024_04-11_FD_KHart_WhiteSeamless_0941-copy-1.png", "tv": false}, {"o": "Cassius", "h": "Check Out These Bottles For Gifting For The 2024 Holiday Season", "d": "Dec 20, 2024", "u": "https://cassiuslife.com/playlist/bottles-gifting-2024-holiday-season/", "i": "", "tv": false}, {"o": "BroadwayWorld", "h": "American Harvest Vodka for Your Summertime Cocktails – 5 Outstanding Recipes", "d": "Jun 18, 2024", "u": "https://www.broadwayworld.com/bwwfood-wine/article/AMERICAN-HARVEST-VODKA-for-Your-Summertime-Cocktails-5-Outstanding-Recipes-20240618", "i": "", "tv": false}]}, {"id": "aruba", "name": "Embassy Suites Aruba", "c": "var(--t-hr)", "label": "Embassy Suites by Hilton Aruba", "blurb": "Supported travel media outreach for the family resort on Palm Beach.", "items": [{"o": "Scary Mommy", "h": "Aruba Is The Ultimate \"Live Like A Local\" Vacation", "d": "Mar 19, 2025", "u": "https://www.scarymommy.com/lifestyle/things-to-do-in-aruba", "i": "https://imgix.bustle.com/uploads/image/2025/3/19/cdb66813/manchebo-beach.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg", "tv": false}]}];
+        var $=function(id){return document.getElementById(id)};
+        var root=$('press'),img=$('p-img'),fb=$('p-fb'),card=$('p-card'),list=$('p-list'),gi=0,ai=0;
+        function initials(o){return o.replace(/^The /,'').split(/[\s&+]+/).filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()}
+        function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+        function fallback(a){img.hidden=true;fb.hidden=false;$('p-fbo').textContent=a.o;$('p-fbh').textContent=a.h}
+        function show(i){
+          var g=G[gi],a=g.items[i];ai=i;
+          card.href=a.u;$('p-link').href=a.u;$('p-link').textContent=a.tv?'Watch segment ↗':'Read article ↗';
+          $('p-out').textContent=a.o;$('p-hl').textContent=a.h;$('p-date').textContent=a.d;
+          $('p-count').textContent=(i+1)+' / '+g.items.length;$('p-tv').hidden=!a.tv;
+          card.setAttribute('aria-label',a.o+': '+a.h);
+          if(a.i){fb.hidden=true;img.hidden=false;img.style.opacity=0;img.onload=function(){img.style.opacity=1};img.onerror=function(){fallback(a)};img.src=a.i;img.alt='Preview image from '+a.o}else{fallback(a)}
+          list.querySelectorAll('.pitem').forEach(function(b,j){b.setAttribute('aria-current',j===i?'true':'false')});
+        }
+        function pick(n){
+          gi=n;var g=G[n];root.style.setProperty('--pc',g.c);
+          document.querySelectorAll('.pchip').forEach(function(c,j){c.setAttribute('aria-pressed',j===n?'true':'false')});
+          $('p-label').textContent=g.label;$('p-blurb').textContent=g.blurb;
+          list.innerHTML=g.items.map(function(a,j){
+            var th=a.i?'<img src="'+esc(a.i)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.textContent=\''+initials(a.o)+'\'">':initials(a.o);
+            return '<li><button class="pitem" type="button" data-i="'+j+'" aria-current="false"><span class="th">'+th+'</span><span><b>'+esc(a.o)+'</b><span class="h">'+esc(a.h)+'</span><span class="d">'+esc(a.d)+'</span></span></button></li>'
+          }).join('');
+          list.querySelectorAll('.pitem').forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i)})});
+          show(0);
+        }
+        document.querySelectorAll('.pchip').forEach(function(c){c.addEventListener('click',function(){pick(+c.dataset.g)})});
+        $('p-prev').addEventListener('click',function(){var n=G[gi].items.length;show((ai-1+n)%n)});
+        $('p-next').addEventListener('click',function(){show((ai+1)%G[gi].items.length)});
+        pick(0);
       })();
       </script>
     </div>
@@ -543,6 +641,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
       tab.setAttribute('aria-selected','true');document.getElementById(tab.getAttribute('aria-controls')).hidden=false;
     });
   });
+  document.querySelectorAll('[data-open]').forEach(function(a){a.addEventListener('click',function(){var t=document.getElementById(a.dataset.open);if(t)t.click()})});
   document.getElementById('copy-email').addEventListener('click',function(){
     var b=this,txt=document.getElementById('email').textContent;
     function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)}
