@@ -508,7 +508,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
         var root=$('press'),img=$('p-img'),fb=$('p-fb'),card=$('p-card'),list=$('p-list'),gi=0,ai=0;
         function initials(o){return o.replace(/^The /,'').split(/[\s&+]+/).filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()}
         function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
-        function fallback(a){img.hidden=true;fb.hidden=false;$('p-fbo').textContent=a.o;$('p-fbh').textContent=a.h}
+        function fallback(a){img.hidden=true;fb.hidden=false;$('p-fbo').textContent=a.o;$('p-fbh').textContent=a.d+(a.tv?' · TV segment':'')}
         function show(i){
           var g=G[gi],a=g.items[i];ai=i;
           card.href=a.u;$('p-link').href=a.u;$('p-link').textContent=a.tv?'Watch segment ↗':'Read article ↗';
