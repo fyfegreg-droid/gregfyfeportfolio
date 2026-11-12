@@ -1,7 +1,7 @@
 name: Fetch press preview images
 on:
   push:
-    paths: ['.github/workflows/fetch-previews.yml']
+    paths: ['.github/workflows/fetch-previews.yml', '.github/press-urls2.json']
 permissions:
   contents: write
 jobs:

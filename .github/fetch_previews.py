@@ -1,14 +1,22 @@
 
 import json,re,os,urllib.request,html
-L=json.load(open('.github/press-urls.json'))
-UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
-def get(u,ref=None):
-    h={'User-Agent':UA,'Accept':'text/html,application/xhtml+xml,image/*,*/*','Accept-Language':'en-US,en;q=0.9'}
+C=json.load(open('.github/press-urls2.json'));L=C['pages'];KN=C['known'];prev=json.load(open('assets/press/manifest.json'))
+UA='facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
+BR='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
+def get(u,ref=None,ua=None):
+    h={'User-Agent':ua or UA,'Accept':'text/html,application/xhtml+xml,image/*,*/*','Accept-Language':'en-US,en;q=0.9'}
     if ref:h['Referer']=ref
     return urllib.request.urlopen(urllib.request.Request(u,headers=h),timeout=30)
 os.makedirs('assets/press',exist_ok=True)
-out={}
+out=dict(prev)
 for k,u in L.items():
+    try:
+        if k in KN:
+            ir=get(KN[k],ref=u,ua=BR);data=ir.read(8_000_000);ct=ir.headers.get('Content-Type','')
+            ext='.png' if 'png' in ct else '.webp' if 'webp' in ct else '.jpg'
+            if ct.startswith('image') and len(data)>3000:
+                p='assets/press/'+k+ext;open(p,'wb').write(data);out[k]=p;print('OKK',k,len(data));continue
+    except Exception as e: print('KERR',k,str(e)[:60])
     try:
         r=get(u); page=r.read(2_000_000).decode('utf-8','ignore')
         m=None
