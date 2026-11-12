@@ -1,0 +1,18 @@
+name: Fetch press preview images
+on:
+  push:
+    paths: ['.github/workflows/fetch-previews.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/fetch_previews.py
+      - run: |
+          git config user.name "Greg Fyfe"
+          git config user.email "fyfegreg@users.noreply.github.com"
+          git add assets/press
+          git commit -m "Add press preview images" || echo nothing
+          git push
