@@ -186,6 +186,10 @@ section{padding-top:80px}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .box h3{font-size:1.15rem;font-weight:700;font-stretch:112%}
 .box p{font-size:.95rem;color:var(--muted)}
+.edu-box{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:18px}
+.edu-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.edu-logo{flex:none;display:flex;align-items:center;justify-content:center;width:112px;height:72px;padding:8px 10px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.edu-logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .creds span{font-family:var(--mono);font-size:.76rem;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
 .lead{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
@@ -584,15 +588,21 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
   <section id="education">
     <div class="sec-head"><div class="k"><span class="label">Education</span><h2>Two degrees, two disciplines</h2></div></div>
     <div class="edu">
-      <div class="box">
-        <span class="label">B.S. Business Administration</span>
-        <h3>University of North Carolina at Charlotte</h3>
-        <p>Concentration in Marketing. Business Honors and Honors College.</p>
+      <div class="box edu-box">
+        <div class="edu-txt">
+          <span class="label">B.S. Business Administration</span>
+          <h3>University of North Carolina at Charlotte</h3>
+          <p>Concentration in Marketing. Business Honors and Honors College.</p>
+        </div>
+        <span class="edu-logo"><img src="assets/img/logos/unc-charlotte.png" alt="UNC Charlotte logo" width="154" height="80" loading="lazy"></span>
       </div>
-      <div class="box">
-        <span class="label">Associate's degree</span>
-        <h3>South Piedmont Community College</h3>
-        <p>Air Conditioning, Heating and Refrigeration Technology.</p>
+      <div class="box edu-box">
+        <div class="edu-txt">
+          <span class="label">Associate's degree</span>
+          <h3>South Piedmont Community College</h3>
+          <p>Air Conditioning, Heating and Refrigeration Technology.</p>
+        </div>
+        <span class="edu-logo"><img src="assets/img/logos/south-piedmont.png" alt="South Piedmont Community College logo" width="142" height="80" loading="lazy"></span>
       </div>
     </div>
     <div class="creds">
