@@ -8,8 +8,10 @@
 <meta property="og:title" content="Gregory Fyfe | Communications, Marketing &amp; Operations">
 <meta property="og:description" content="I keep clients, crews and media on the same page.">
 <link rel="canonical" href="https://gregfyfeportfolio.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:url" content="https://gregfyfeportfolio.com/">
-<meta property="og:image" content="https://static.wixstatic.com/media/76e0a8_9a181fab8d974f51a96375a2de58726a~mv2.jpg">
+<meta property="og:image" content="https://gregfyfeportfolio.com/assets/img/9a181fab8d974f51a96375a2de58726a.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;125,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -252,6 +254,37 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
 .outlets{margin-top:22px;font-family:var(--mono);font-size:.76rem;line-height:1.7;color:var(--hero-muted);max-width:60ch}
 .outlets b{color:var(--hero-ink);font-weight:500}
 @media (max-width:820px){ .press{grid-template-columns:1fr} .pstage{padding:18px} .pfb{padding:18px} .plist{max-height:none} }
+.gcs{margin-top:12px;font-size:.95rem}
+.gcs span{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.kudos{max-width:580px;margin-top:12px;padding:10px 14px;border-left:3px solid var(--c);background:color-mix(in srgb,var(--c) 8%,transparent);border-radius:0 10px 10px 0;font-style:italic}
+.ws-band{margin-top:28px;padding:28px 32px;border-radius:20px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ws-band .label{color:var(--accent)}
+.ws-band h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;font-stretch:118%;margin-top:6px}
+.ws-band p{color:var(--muted);margin-top:8px;max-width:58ch}
+.ws-band .btn.primary{color:var(--accent-ink)}
+.contact .acts button[data-ws]{font:inherit}
+.wsdlg{max-width:680px}
+.wsdlg form{margin:0}
+.ws-types{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.ws-types legend{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;padding:0}
+.ws-types label{cursor:pointer}
+.ws-types input{position:absolute;opacity:0;pointer-events:none}
+.ws-types span{display:inline-block;font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:7px 12px}
+.ws-types input:checked + span{background:var(--accent);border-color:var(--accent);color:#fff}
+.ws-types input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+.ws-f{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+.ws-f span{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ws-f input,.ws-f textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.ws-f textarea{resize:vertical;min-height:110px}
+.ws-row{display:flex;gap:12px;flex-wrap:wrap}
+.ws-row .ws-f{min-width:200px}
+.ws-err{color:#C0392B !important;font-size:.92rem}
+.ws-note{font-size:.85rem}
+@media (max-width:560px){
+  .tabs{display:flex;width:100%}
+  .tab{flex:1;white-space:nowrap;font-size:.72rem;padding:8px 8px}
+  .ws-band{padding:22px}
+}
 .exp-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.8rem;color:var(--c);text-decoration:none;border-bottom:1px solid currentColor}
 @media (max-width:980px){ .tracks{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:820px){
@@ -303,7 +336,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
       </div>
     </div>
     <figure class="portrait">
-      <div class="frame"><img src="https://static.wixstatic.com/media/76e0a8_9a181fab8d974f51a96375a2de58726a~mv2.jpg" alt="Headshot of Gregory Fyfe" width="400" height="400"></div>
+      <div class="frame"><img src="assets/img/9a181fab8d974f51a96375a2de58726a.jpg" alt="Headshot of Gregory Fyfe" width="400" height="400"></div>
       <figcaption><b>Gregory Fyfe</b><span><i class="dot"></i>On-Site Supervisor, Arthur Mechanical</span></figcaption>
     </figure>
   </header>
@@ -354,6 +387,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
             <li>Prepare and track proposals, bids, change orders and submittals, and keep project schedules on track.</li>
             <li>Source materials, coordinate vendor deliveries, and support emergency service calls.</li>
           </ul>
+          <p class="gcs"><span>General contractors I work with</span>GWG · 3D Construction Group · M2M Construction</p>
         </div>
       </div>
       <div class="row" style="--c:var(--t-comm)">
@@ -362,10 +396,11 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
           <h3>Account Coordinator</h3>
           <div class="org">Berk Communications · PR agency</div>
           <ul>
-            <li>Supported national food, beverage, hospitality and lifestyle clients with media outreach and coverage tracking.</li>
-            <li>Helped develop pitches that earned digital and print placements, and kept media contact lists current.</li>
-            <li>Wrote agendas, call recaps, briefing documents and monthly coverage reports, and compiled performance metrics on media trends.</li>
+            <li>Supported media relations for Caesars Entertainment (Las Vegas and New Orleans), The Cheesecake Factory, Fanatics, Gran Coramino Tequila, VAI Resort and Embassy Suites by Hilton Aruba.</li>
+            <li>Helped run hosted press trips, and worked on site at Fanatics Fest NYC 2025 tracking live coverage and guiding media.</li>
+            <li>Wrote pitches, built media and influencer lists, and produced agendas, call recaps and weekly and monthly coverage reports.</li>
           </ul>
+          <p class="kudos">Feedback I heard more than once, from different people at Berk: my coverage tracking was amazing.</p>
           <a class="exp-link" href="#work" data-open="tab-press">See press coverage →</a>
         </div>
       </div>
@@ -396,17 +431,17 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
     <div class="panel" id="panel-decks" role="tabpanel" aria-labelledby="tab-decks">
       <div class="viewer">
         <div class="stage">
-          <div class="shot"><img id="deck-img" src="https://static.wixstatic.com/media/76e0a8_592d149fe7514f2dbb60d2f9f2fcfdbc~mv2.png" alt="Cover slide of the Red Sox campaign case study" width="1920" height="1080"></div>
+          <div class="shot"><img id="deck-img" src="assets/img/592d149fe7514f2dbb60d2f9f2fcfdbc.png" alt="Cover slide of the Red Sox campaign case study" width="1920" height="1080"></div>
           <div class="meta">
             <div><h3 id="deck-title">Boston Red Sox campaign</h3><p id="deck-desc">A marketing campaign case study.</p></div>
-            <a class="btn primary" id="deck-link" href="https://34bc7efa-d6b5-45b9-9bf9-ddf2d6caf1b0.usrfiles.com/ugd/76e0a8_e69188070f6e42cc862b13515fe12dbb.pdf" target="_blank" rel="noopener">View deck ↗</a>
+            <a class="btn primary" id="deck-link" href="assets/decks/e69188070f6e42cc862b13515fe12dbb.pdf" target="_blank" rel="noopener">View deck ↗</a>
           </div>
         </div>
         <ul class="decklist">
-          <li><button class="deck" aria-current="true" data-img="https://static.wixstatic.com/media/76e0a8_592d149fe7514f2dbb60d2f9f2fcfdbc~mv2.png" data-alt="Cover slide of the Red Sox campaign case study" data-title="Boston Red Sox campaign" data-desc="A marketing campaign case study." data-link="https://34bc7efa-d6b5-45b9-9bf9-ddf2d6caf1b0.usrfiles.com/ugd/76e0a8_e69188070f6e42cc862b13515fe12dbb.pdf"><span class="n">01</span><span><b>Boston Red Sox campaign</b><span>Campaign case study · UNC Charlotte</span></span></button></li>
-          <li><button class="deck" aria-current="false" data-img="https://static.wixstatic.com/media/76e0a8_23b7392aad964785b2b2b158c58d32c9~mv2.png" data-alt="Cover slide of the Zoom ideation and validation presentation" data-title="Zoom ideation &amp; validation" data-desc="Developing and testing new product ideas for Zoom." data-link="https://34bc7efa-d6b5-45b9-9bf9-ddf2d6caf1b0.usrfiles.com/ugd/76e0a8_d23c79f487d648c1a977873ba6c07762.pdf"><span class="n">02</span><span><b>Zoom ideation &amp; validation</b><span>Product strategy · UNC Charlotte</span></span></button></li>
-          <li><button class="deck" aria-current="false" data-img="https://static.wixstatic.com/media/76e0a8_9d211d558bc543b8a9c18f74d90bf02b~mv2.png" data-alt="Cover slide of the Slack app presentation" data-title="Slack app" data-desc="A presentation on the Slack app." data-link="https://34bc7efa-d6b5-45b9-9bf9-ddf2d6caf1b0.usrfiles.com/ugd/76e0a8_c5e70075ba0749a99744451408e0bce0.pdf"><span class="n">03</span><span><b>Slack app</b><span>App analysis · UNC Charlotte</span></span></button></li>
-          <li><button class="deck" aria-current="false" data-img="https://static.wixstatic.com/media/76e0a8_16b5d11e08ed4cc19ef0fd74690b81ba~mv2.png" data-alt="Cover slide of the Bank of America fraud AI group presentation" data-title="Bank of America fraud AI" data-desc="A team presentation on using AI for fraud detection." data-link="https://34bc7efa-d6b5-45b9-9bf9-ddf2d6caf1b0.usrfiles.com/ugd/76e0a8_3718ad0abae944efa2d709c830c05149.pdf"><span class="n">04</span><span><b>Bank of America fraud AI</b><span>Group project · UNC Charlotte</span></span></button></li>
+          <li><button class="deck" aria-current="true" data-img="assets/img/592d149fe7514f2dbb60d2f9f2fcfdbc.png" data-alt="Cover slide of the Red Sox campaign case study" data-title="Boston Red Sox campaign" data-desc="A marketing campaign case study." data-link="assets/decks/e69188070f6e42cc862b13515fe12dbb.pdf"><span class="n">01</span><span><b>Boston Red Sox campaign</b><span>Campaign case study · UNC Charlotte</span></span></button></li>
+          <li><button class="deck" aria-current="false" data-img="assets/img/23b7392aad964785b2b2b158c58d32c9.png" data-alt="Cover slide of the Zoom ideation and validation presentation" data-title="Zoom ideation &amp; validation" data-desc="Developing and testing new product ideas for Zoom." data-link="assets/decks/d23c79f487d648c1a977873ba6c07762.pdf"><span class="n">02</span><span><b>Zoom ideation &amp; validation</b><span>Product strategy · UNC Charlotte</span></span></button></li>
+          <li><button class="deck" aria-current="false" data-img="assets/img/9d211d558bc543b8a9c18f74d90bf02b.png" data-alt="Cover slide of the Slack app presentation" data-title="Slack app" data-desc="A presentation on the Slack app." data-link="assets/decks/c5e70075ba0749a99744451408e0bce0.pdf"><span class="n">03</span><span><b>Slack app</b><span>App analysis · UNC Charlotte</span></span></button></li>
+          <li><button class="deck" aria-current="false" data-img="assets/img/16b5d11e08ed4cc19ef0fd74690b81ba.png" data-alt="Cover slide of the Bank of America fraud AI group presentation" data-title="Bank of America fraud AI" data-desc="A team presentation on using AI for fraud detection." data-link="assets/decks/3718ad0abae944efa2d709c830c05149.pdf"><span class="n">04</span><span><b>Bank of America fraud AI</b><span>Group project · UNC Charlotte</span></span></button></li>
         </ul>
       </div>
     </div>
@@ -419,8 +454,8 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
               <div class="top"><span>9:41</span><span class="bat" aria-hidden="true"></span></div>
               <div class="post">
                 <div class="media">
-                  <video id="g-vid" src="https://video.wixstatic.com/video/76e0a8_6a19531f611d4627a951fa254feaec26/720p/mp4/file.mp4" poster="https://static.wixstatic.com/media/76e0a8_6a19531f611d4627a951fa254feaec26f000.jpg" controls muted loop playsinline preload="metadata"></video>
-                  <img id="g-img" src="https://static.wixstatic.com/media/76e0a8_88de7aa9089949b681e32cf4f6885a8c~mv2.png" alt="Social media post designed for The Growing Artist" width="1080" height="1080" hidden>
+                  <video id="g-vid" src="assets/video/6a19531f611d4627a951fa254feaec26.mp4" poster="assets/img/6a19531f611d4627a951fa254feaec26f000.jpg" controls muted loop playsinline preload="metadata"></video>
+                  <img id="g-img" src="assets/img/88de7aa9089949b681e32cf4f6885a8c.png" alt="Social media post designed for The Growing Artist" width="1080" height="1080" hidden>
                 </div>
                 <div class="side">
                   <div class="ph"><i class="av"></i><b>thegrowingartist</b><span class="more" aria-hidden="true">•••</span></div>
@@ -435,15 +470,15 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
         </div>
         <div class="gside">
           <ul class="glist">
-            <li><button class="gitem" aria-current="true" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_6a19531f611d4627a951fa254feaec26/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_6a19531f611d4627a951fa254feaec26f000.jpg" data-type="Reel" data-date="October 10, 2023" data-dt="2023-10-10"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_6a19531f611d4627a951fa254feaec26f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Oct 10, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_50f110e5b02a4566b0a3a99762829d12/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_50f110e5b02a4566b0a3a99762829d12f000.jpg" data-type="Reel" data-date="October 2, 2023" data-dt="2023-10-02"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_50f110e5b02a4566b0a3a99762829d12f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Oct 2, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_9b32de62b1704ff2bbd4955f0e382389/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_9b32de62b1704ff2bbd4955f0e382389f000.jpg" data-type="Reel" data-date="September 18, 2023" data-dt="2023-09-18"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_9b32de62b1704ff2bbd4955f0e382389f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Sep 18, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_333e583e0e1549faa346b2aa6b4465aa/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_333e583e0e1549faa346b2aa6b4465aaf000.jpg" data-type="Reel" data-date="August 30, 2023" data-dt="2023-08-30"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_333e583e0e1549faa346b2aa6b4465aaf000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Aug 30, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="image" data-src="https://static.wixstatic.com/media/76e0a8_88de7aa9089949b681e32cf4f6885a8c~mv2.png" data-poster="https://static.wixstatic.com/media/76e0a8_88de7aa9089949b681e32cf4f6885a8c~mv2.png" data-type="Post" data-date="August 29, 2023" data-dt="2023-08-29"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_88de7aa9089949b681e32cf4f6885a8c~mv2.png" alt="" width="52" height="52" loading="lazy"></span><span><b>Post · Aug 29, 2023</b><span>Image · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_7f9130bf7ed54267bdc0e4baa7ab5bfe/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_7f9130bf7ed54267bdc0e4baa7ab5bfef000.jpg" data-type="Carousel" data-date="August 14, 2023" data-dt="2023-08-14"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_7f9130bf7ed54267bdc0e4baa7ab5bfef000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Carousel · Aug 14, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_d5d944e3997647e1bad8d83e40f66ce7/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_d5d944e3997647e1bad8d83e40f66ce7f000.jpg" data-type="Carousel" data-date="July 31, 2023" data-dt="2023-07-31"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_d5d944e3997647e1bad8d83e40f66ce7f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Carousel · Jul 31, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="video" data-src="https://video.wixstatic.com/video/76e0a8_25ce1685d4b44b9198286bbbbde749d2/720p/mp4/file.mp4" data-poster="https://static.wixstatic.com/media/76e0a8_25ce1685d4b44b9198286bbbbde749d2f000.jpg" data-type="Carousel" data-date="July 26, 2023" data-dt="2023-07-26"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_25ce1685d4b44b9198286bbbbde749d2f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Carousel · Jul 26, 2023</b><span>Video · The Growing Artist</span></span></button></li>
-            <li><button class="gitem" aria-current="false" data-kind="image" data-src="https://static.wixstatic.com/media/76e0a8_fc21a29d4f0f4c63b5b1a9fdd136d07d~mv2.png" data-poster="https://static.wixstatic.com/media/76e0a8_fc21a29d4f0f4c63b5b1a9fdd136d07d~mv2.png" data-type="Post" data-date="July 7, 2023" data-dt="2023-07-07"><span class="th"><img src="https://static.wixstatic.com/media/76e0a8_fc21a29d4f0f4c63b5b1a9fdd136d07d~mv2.png" alt="" width="52" height="52" loading="lazy"></span><span><b>Post · Jul 7, 2023</b><span>Image · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="true" data-kind="video" data-src="assets/video/6a19531f611d4627a951fa254feaec26.mp4" data-poster="assets/img/6a19531f611d4627a951fa254feaec26f000.jpg" data-type="Reel" data-date="October 10, 2023" data-dt="2023-10-10"><span class="th"><img src="assets/img/6a19531f611d4627a951fa254feaec26f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Oct 10, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="video" data-src="assets/video/50f110e5b02a4566b0a3a99762829d12.mp4" data-poster="assets/img/50f110e5b02a4566b0a3a99762829d12f000.jpg" data-type="Reel" data-date="October 2, 2023" data-dt="2023-10-02"><span class="th"><img src="assets/img/50f110e5b02a4566b0a3a99762829d12f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Oct 2, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="video" data-src="assets/video/9b32de62b1704ff2bbd4955f0e382389.mp4" data-poster="assets/img/9b32de62b1704ff2bbd4955f0e382389f000.jpg" data-type="Reel" data-date="September 18, 2023" data-dt="2023-09-18"><span class="th"><img src="assets/img/9b32de62b1704ff2bbd4955f0e382389f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Sep 18, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="video" data-src="assets/video/333e583e0e1549faa346b2aa6b4465aa.mp4" data-poster="assets/img/333e583e0e1549faa346b2aa6b4465aaf000.jpg" data-type="Reel" data-date="August 30, 2023" data-dt="2023-08-30"><span class="th"><img src="assets/img/333e583e0e1549faa346b2aa6b4465aaf000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Reel · Aug 30, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="image" data-src="assets/img/88de7aa9089949b681e32cf4f6885a8c.png" data-poster="assets/img/88de7aa9089949b681e32cf4f6885a8c.png" data-type="Post" data-date="August 29, 2023" data-dt="2023-08-29"><span class="th"><img src="assets/img/88de7aa9089949b681e32cf4f6885a8c.png" alt="" width="52" height="52" loading="lazy"></span><span><b>Post · Aug 29, 2023</b><span>Image · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="video" data-src="assets/video/7f9130bf7ed54267bdc0e4baa7ab5bfe.mp4" data-poster="assets/img/7f9130bf7ed54267bdc0e4baa7ab5bfef000.jpg" data-type="Carousel" data-date="August 14, 2023" data-dt="2023-08-14"><span class="th"><img src="assets/img/7f9130bf7ed54267bdc0e4baa7ab5bfef000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Carousel · Aug 14, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="video" data-src="assets/video/d5d944e3997647e1bad8d83e40f66ce7.mp4" data-poster="assets/img/d5d944e3997647e1bad8d83e40f66ce7f000.jpg" data-type="Carousel" data-date="July 31, 2023" data-dt="2023-07-31"><span class="th"><img src="assets/img/d5d944e3997647e1bad8d83e40f66ce7f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Carousel · Jul 31, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="video" data-src="assets/video/25ce1685d4b44b9198286bbbbde749d2.mp4" data-poster="assets/img/25ce1685d4b44b9198286bbbbde749d2f000.jpg" data-type="Carousel" data-date="July 26, 2023" data-dt="2023-07-26"><span class="th"><img src="assets/img/25ce1685d4b44b9198286bbbbde749d2f000.jpg" alt="" width="52" height="52" loading="lazy"><i class="play"></i></span><span><b>Carousel · Jul 26, 2023</b><span>Video · The Growing Artist</span></span></button></li>
+            <li><button class="gitem" aria-current="false" data-kind="image" data-src="assets/img/fc21a29d4f0f4c63b5b1a9fdd136d07d.png" data-poster="assets/img/fc21a29d4f0f4c63b5b1a9fdd136d07d.png" data-type="Post" data-date="July 7, 2023" data-dt="2023-07-07"><span class="th"><img src="assets/img/fc21a29d4f0f4c63b5b1a9fdd136d07d.png" alt="" width="52" height="52" loading="lazy"></span><span><b>Post · Jul 7, 2023</b><span>Image · The Growing Artist</span></span></button></li>
           </ul>
           <div class="gabout">
             <span class="label" style="color:var(--t-mkt)">The Growing Artist · 2023</span>
@@ -537,6 +572,15 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
     </div>
   </section>
 
+  <div class="ws-band" id="writing">
+    <div>
+      <span class="label">Writing samples</span>
+      <h2>Need a writing sample?</h2>
+      <p>Send me a scenario and I'll write a sample for it: a press release, a press trip invitation, a coverage tracker, a meeting agenda, a monthly recap report, or several of them.</p>
+    </div>
+    <button class="btn primary" type="button" data-ws>Request a writing sample →</button>
+  </div>
+
   <section id="education">
     <div class="sec-head"><div class="k"><span class="label">Education</span><h2>Two degrees, two disciplines</h2></div></div>
     <div class="edu">
@@ -562,7 +606,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
     <div class="sec-head"><div class="k"><span class="label">Community</span><h2>Leadership &amp; involvement</h2></div></div>
     <div class="lead">
       <div class="lc feat" style="--c:var(--t-hr)">
-        <img src="https://static.wixstatic.com/media/76e0a8_80e0b22db35f480cb5575a41841c5e0b~mv2.jpg/v1/crop/x_0,y_400,w_2400,h_920/hcap-group.jpg" alt="Hispanic College Awareness Program group photo" loading="lazy" width="2400" height="920">
+        <img src="assets/img/hcap-group.jpg" alt="Hispanic College Awareness Program group photo" loading="lazy" width="2400" height="920">
         <div class="b">
           <div class="l"><span class="tag">President</span><h3>Hispanic College Awareness Program</h3><span class="org">UNC Charlotte</span></div>
           <p>Led the organization, working to expand cultural awareness and educational opportunities for Hispanic students across the UNC Charlotte community.</p>
@@ -573,7 +617,7 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
         <div class="b"><span class="tag">Member</span><h3>Business Honors Program</h3><span class="org">UNC Charlotte</span><p>An academically advanced program that pairs a challenging business curriculum with hands-on community service.</p></div>
       </div>
       <div class="lc" style="--c:var(--t-field)">
-        <img src="https://static.wixstatic.com/media/76e0a8_0e882dd34d734bba8c9e6c27e9a2799f~mv2.jpg" alt="Latin American Chamber of Commerce of Charlotte Cultivando Talento program flyer" loading="lazy" width="2400" height="1256">
+        <img src="assets/img/0e882dd34d734bba8c9e6c27e9a2799f.jpg" alt="Latin American Chamber of Commerce of Charlotte Cultivando Talento program flyer" loading="lazy" width="2400" height="1256">
         <div class="b"><span class="tag">Program participant</span><h3>Latin American Chamber of Commerce of Charlotte</h3><span class="org">Charlotte, NC</span><p>Supports local businesses and promotes cultural diversity and economic growth across the Charlotte region.</p></div>
       </div>
     </div>
@@ -587,11 +631,38 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
     </div>
     <div class="lines">
       <div class="line"><span id="email">fyfegreg@gmail.com</span><span class="acts"><a href="mailto:fyfegreg@gmail.com">Email</a><button type="button" id="copy-email">Copy</button></span></div>
+      <div class="line"><span>Writing sample</span><span class="acts"><button type="button" data-ws>Request ↗</button></span></div>
       <div class="line"><span>linkedin.com/in/gregory-fyfe</span><span class="acts"><a href="https://www.linkedin.com/in/gregory-fyfe" target="_blank" rel="noopener">Open ↗</a></span></div>
     </div>
   </div>
 
   <footer><span>© 2026 Gregory Fyfe</span><span>Communications · Marketing · Recruiting · Operations</span></footer>
+  <dialog class="tdlg wsdlg" id="ws-dlg" aria-labelledby="ws-title" style="--c:var(--accent)">
+    <form class="in" id="ws-form" novalidate>
+      <div class="top"><div><span class="num">Writing sample request</span><h3 id="ws-title">Tell me what to write</h3></div><button class="x" type="button" id="ws-close" aria-label="Close">×</button></div>
+      <p>Pick one or more sample types and describe the scenario. Your request opens as an email to me, and I'll reply with the finished sample.</p>
+      <fieldset class="ws-types"><legend>Sample type</legend>
+        <label><input type="checkbox" name="type" value="Press release"><span>Press release</span></label>
+        <label><input type="checkbox" name="type" value="Press trip invitation"><span>Press trip invitation</span></label>
+        <label><input type="checkbox" name="type" value="Coverage tracker"><span>Coverage tracker</span></label>
+        <label><input type="checkbox" name="type" value="Meeting agenda"><span>Meeting agenda</span></label>
+        <label><input type="checkbox" name="type" value="Monthly recap report"><span>Monthly recap report</span></label>
+        <label><input type="checkbox" name="type" value="Other"><span>Other</span></label>
+      </fieldset>
+      <label class="ws-f"><span>Scenario</span><textarea name="scenario" rows="5" required placeholder="Example: A boutique hotel in Miami is opening a rooftop restaurant in March. Write a press release announcing it and an invitation for a media preview dinner."></textarea></label>
+      <div class="ws-row">
+        <label class="ws-f"><span>Your name</span><input name="name" autocomplete="name" required></label>
+        <label class="ws-f"><span>Company</span><input name="company" autocomplete="organization"></label>
+      </div>
+      <div class="ws-row">
+        <label class="ws-f"><span>Your email</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="ws-f"><span>Needed by (optional)</span><input name="due" placeholder="e.g. Friday"></label>
+      </div>
+      <p class="ws-err" id="ws-err" role="alert" hidden></p>
+      <div class="acts"><button class="btn primary" type="submit">Send request ↗</button><button class="btn ghost" type="button" id="ws-copy">Copy request</button></div>
+      <p class="ws-note" id="ws-note">Doesn't open an email app? Use “Copy request” and send it to fyfegreg@gmail.com.</p>
+    </form>
+  </dialog>
   <dialog class="tdlg" id="track-dlg" aria-labelledby="td-title">
     <div class="in">
       <div class="top"><div><span class="num" id="td-num"></span><h3 id="td-title"></h3></div><button class="x" type="button" id="td-close" aria-label="Close">×</button></div>
@@ -640,6 +711,38 @@ footer{margin-top:24px;font-family:var(--mono);font-size:.75rem;color:var(--mute
       tab.setAttribute('aria-selected','true');document.getElementById(tab.getAttribute('aria-controls')).hidden=false;
     });
   });
+  (function(){
+    var d=document.getElementById('ws-dlg'),f=document.getElementById('ws-form'),err=document.getElementById('ws-err');
+    function open(){if(d.showModal){d.showModal()}else{d.setAttribute('open','')}}
+    function close(){d.close?d.close():d.removeAttribute('open')}
+    document.querySelectorAll('[data-ws]').forEach(function(b){b.addEventListener('click',open)});
+    document.getElementById('ws-close').addEventListener('click',close);
+    d.addEventListener('click',function(e){if(e.target===d)close()});
+    function build(){
+      var t=[].map.call(f.querySelectorAll('input[name=type]:checked'),function(x){return x.value});
+      var v=function(n){return (f.elements[n].value||'').trim()};
+      if(!t.length)return {e:'Pick at least one sample type.'};
+      if(!v('scenario'))return {e:'Describe the scenario you want me to write for.'};
+      if(!v('name')||!v('email'))return {e:'Add your name and email so I can send the sample back.'};
+      var body='Sample type: '+t.join(', ')+'\n\nScenario:\n'+v('scenario')+'\n\nName: '+v('name')+(v('company')?'\nCompany: '+v('company'):'')+'\nEmail: '+v('email')+(v('due')?'\nNeeded by: '+v('due'):'');
+      var subj='Writing sample request'+(v('company')?' from '+v('company'):' from '+v('name'));
+      return {s:subj,b:body};
+    }
+    f.addEventListener('submit',function(e){
+      e.preventDefault();var r=build();
+      if(r.e){err.textContent=r.e;err.hidden=false;return}
+      err.hidden=true;
+      location.href='mailto:fyfegreg@gmail.com?subject='+encodeURIComponent(r.s)+'&body='+encodeURIComponent(r.b);
+      document.getElementById('ws-note').textContent='Your email app should open with the request filled in. If it didn\u2019t, use \u201cCopy request\u201d and send it to fyfegreg@gmail.com.';
+    });
+    document.getElementById('ws-copy').addEventListener('click',function(){
+      var r=build(),b=this;
+      if(r.e){err.textContent=r.e;err.hidden=false;return}
+      err.hidden=true;var txt=r.s+'\n\n'+r.b;
+      function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy request'},1800)}
+      try{navigator.clipboard.writeText(txt).then(ok,function(){window.prompt('Copy your request:',txt)})}catch(x){window.prompt('Copy your request:',txt)}
+    });
+  })();
   document.querySelectorAll('[data-open]').forEach(function(a){a.addEventListener('click',function(){var t=document.getElementById(a.dataset.open);if(t)t.click()})});
   document.getElementById('copy-email').addEventListener('click',function(){
     var b=this,txt=document.getElementById('email').textContent;
