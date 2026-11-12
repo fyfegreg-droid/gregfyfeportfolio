@@ -1,7 +1,7 @@
 name: Fetch press preview images
 on:
   push:
-    paths: ['.github/workflows/fetch-previews.yml', '.github/press-urls2.json']
+    paths: ['.github/fetch_previews3.py']
 permissions:
   contents: write
 jobs:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 .github/fetch_previews.py
+      - run: python3 .github/fetch_previews3.py
       - run: |
           git config user.name "Greg Fyfe"
           git config user.email "fyfegreg@users.noreply.github.com"
